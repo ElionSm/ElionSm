@@ -1,46 +1,77 @@
-## Samuel Boisneault
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="banner-dark.svg">
+  <img alt="Samuel Boisneault — sécurité applicative, DevSecOps" src="banner-light.svg" width="100%">
+</picture>
 
-Cybersecurity engineering student at **ESIEE Paris** (5th year, SecNumedu-accredited by ANSSI).
-Looking for a **6-month final-year internship starting February 2027** — application security, DevSecOps or cloud security.
+<br>
 
-I write backend code, and I am moving toward securing it. Most of what I know about
-application security, I learned by instrumenting systems that were not designed to be
-instrumented, and paying attention to what fell out.
+Je construis des backends, puis je cherche par où ils cèdent.
 
-### Currently
+Étudiant ingénieur en cybersécurité à **ESIEE Paris** (5ᵉ année, cursus labellisé
+SecNumedu par l'ANSSI). Je cherche un **stage de fin d'études de 6 mois à partir de
+février 2027**, en sécurité applicative, DevSecOps ou sécurité cloud.
 
-Working through the [PortSwigger Web Security Academy](https://portswigger.net/web-security)
-labs and keeping notes in **[websec-labs](https://github.com/ElionSm/websec-labs)** —
-SQL injection, access control, SSRF, deserialization.
+<br>
 
-### Internship at Orange — May to August 2026
+## Projets
 
-Backend Java team, on applications that matter to the business.
+### [agent-memory-security](https://github.com/ElionSm/agent-memory-security)
 
-I designed and industrialised an internal platform that automates non-regression test
-campaigns: Java engine, REST API, web UI for the test repository, campaign dashboard,
-wired into GitLab CI/CD and deployed on a PaaS. Alongside it, a Go service that receives
-OpenTelemetry traces and turns them into artifacts the pipeline can actually consume —
-the facade holds the only public entry point, while the collector and the file writing
-stay local to the instance.
+Une mémoire persistante d'agent LLM peut être empoisonnée par un simple fichier local :
+l'instruction devient un souvenir, le souvenir survit à la session, et il ressort plus tard
+pour justifier un appel d'outil. Ce dépôt reproduit cette baseline vulnérable, puis construit
+autour d'elle une autorité de mémoire liée à l'origine — une mémoire ne peut justifier une
+action que si sa provenance lui en donne le droit.
 
-While instrumenting a target application, I found a vulnerability and took it end to end:
-impact analysis, fix, configuration hardening, and a written analysis for the team. It
-confirmed the direction I already wanted, and I went on to own the platform's security
-work — a STRIDE threat model mapped to OWASP Top 10, CWE and CAPEC, secret handling in
-logs and storage, strict TLS certificate validation, data purges that dry-run by default,
-and supply-chain checks that fail the build when a third-party binary's SHA-256 does not
-match the pinned value.
+Toute la chaîne `source → mémoire → rappel → tâche → appel d'outil` est persistée et
+auditable, et chaque rejet porte un code stable. Les destinations sensibles sont
+systématiquement simulées : rien n'est jamais envoyé.
 
-The lesson I keep from it: a control that does not produce a decision has produced
-nothing. A checksum that is merely logged is not a control; one that stops the build is.
+`Python 3.12` · `SQLite` · `Ollama` · `pytest` · `ruff` · `mypy`
 
-### Tools I have actually used
+### [websec-labs](https://github.com/ElionSm/websec-labs)
 
-`Java 17` `Spring Boot` `Go` `Python` `Bash` `SQL` `Angular`
-`GitLab CI/CD` `Docker` `AWS` `Cloud Foundry` `MongoDB` `OpenTelemetry` `Nginx`
-`OWASP Top 10` `OWASP ASVS` `STRIDE` `ISO/IEC 27001`
+Mes notes sur les labs de la Web Security Academy de PortSwigger — injection SQL, contrôle
+d'accès, SSRF, désérialisation. Une règle : aucune assistance tant que le lab n'est pas
+résolu. L'objectif est de reconnaître une construction vulnérable à vue, et déléguer cette
+étape ne produit rien.
 
-### Elsewhere
+`Markdown` · en cours
+
+### [photo-sorter-windows](https://github.com/ElionSm/photo-sorter-windows)
+
+Application de bureau pour trier les photos d'un téléphone et les exporter vers une archive.
+Import incrémental, déduplication par empreinte SHA-256, file de traitement asynchrone et
+cache LRU de vignettes. Petit outil, mais fini et réellement utilisé.
+
+`C#` · `WinUI` · `SQLite`
+
+<br>
+
+## Expérience
+
+**Orange** — stagiaire ingénieur, sécurité applicative et automatisation de tests
+· mai à août 2026 · équipe backend Java.
+
+Une plateforme interne d'automatisation des campagnes de tests de non-régression, un service
+Go de collecte de traces OpenTelemetry, et le volet sécurité de l'ensemble : modèle de menaces
+STRIDE, protection des secrets, validation stricte des certificats TLS, purges en simulation
+par défaut, et vérification d'intégrité des binaires tiers qui casse le build en cas d'écart.
+
+C'est de là que vient la seule règle que je garde de ce stage : **un contrôle qui ne produit
+pas de décision n'a rien produit.** Une empreinte qu'on se contente de journaliser n'est pas
+un contrôle ; une empreinte qui arrête la construction en est un.
+
+<br>
+
+## Outils
+
+**Langages** — Java 17, Go, Python, C#, SQL, Bash
+**Plateforme** — Spring Boot, GitLab CI/CD, Docker, AWS, Cloud Foundry, MongoDB, OpenTelemetry
+**Sécurité** — OWASP Top 10 et ASVS, STRIDE, CWE, ISO/IEC 27001
+
+<br>
+
+## Me joindre
 
 [LinkedIn](https://www.linkedin.com/in/samuel-boisneault) · samuelboisneault.pro@gmail.com

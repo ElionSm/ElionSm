@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300" role="img" aria-label="Samuel Boisneault — Securite applicative, DevSecOps">
+  <rect width="1200" height="300" fill="#11161B"/>
+
+  <g font-family="Helvetica Neue, Helvetica, Arial, sans-serif" text-anchor="middle">
+    <text x="600" y="128" fill="#EAEEF1" font-size="54" font-weight="300" letter-spacing="1.5">
+      Samuel <tspan font-weight="700">BOISNEAULT</tspan>
+    </text>
+
+    <!-- Filet : un segment orange court, le reste en gris. Le seul accent de couleur. -->
+    <line x1="470" y1="163" x2="562" y2="163" stroke="#F08A3C" stroke-width="2.5"/>
+    <line x1="562" y1="163" x2="730" y2="163" stroke="#2E3841" stroke-width="2.5"/>
+
+    <text x="600" y="203" fill="#AAB4BC" font-size="19" font-weight="600" letter-spacing="3.4">
+      SÉCURITÉ APPLICATIVE · DEVSECOPS
+    </text>
+
+    <text x="600" y="240" fill="#7C878F" font-size="15.5" letter-spacing="0.4">
+      ESIEE Paris · 5ᵉ année · stage de fin d'études, février 2027
+    </text>
+  </g>
+</svg>
