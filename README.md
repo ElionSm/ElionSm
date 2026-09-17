@@ -51,9 +51,12 @@ réservé au VPN WireGuard. Ma part : la chaîne Jenkins, et Fail2Ban sur les lo
 un filtre écrit à la main contre les scans de pages, un bannissement immédiat au premier
 dépassement de débit et une jail de récidive.
 
-**NeXusGate** (ESIEE, 2025). Portique de contrôle d'accès par reconnaissance faciale 3D,
-dont j'ai mené la partie réseau ; données biométriques traitées selon l'article 9 du RGPD.
-Prix du meilleur projet technique de l'ESIEE 2025, parmi plus de 75 projets.
+**NeXusGate** (ESIEE, 2025, équipe de six). Porte connectée à reconnaissance faciale, avec
+vérification en 3D que le visage est réel. Responsable réseau, j'ai construit l'API REST
+Flask qui commande la porte depuis un Raspberry Pi, protégée par jeton, l'accès distant par
+un tunnel Cloudflare sans aucun port ouvert, et la diffusion du flux vidéo de la Kinect.
+Données biométriques traitées selon l'article 9 du RGPD. Prix du meilleur projet technique
+de l'ESIEE 2025, parmi plus de 75 projets.
 
 <br>
 
